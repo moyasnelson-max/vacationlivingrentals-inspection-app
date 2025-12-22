@@ -13,11 +13,13 @@ export default function Hero({ lang = "en" }) {
   }[lang];
 
   return (
-    <section className="hero-wrap hero-wrap--lead">
-      <div className="hero-card hero-card--lead">
-        <h1>{c.title}</h1>
-        <h2>{c.subtitle}</h2>
-        <p>{c.desc}</p>
+    <section className="hero hero-shell hero-wrap--lead" role="region" aria-label="Hero">
+      <div className="hero-frame">
+        <div className="hero-card hero-card--lead">
+          <h1>{c.title}</h1>
+          <h2>{c.subtitle}</h2>
+          <p>{c.desc}</p>
+        </div>
       </div>
     </section>
   );

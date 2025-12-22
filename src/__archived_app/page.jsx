@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <>
       <Header lang={lang} />
-      <Hero lang={lang} />
+      <section className="hero-executive">
+        <Hero lang={lang} />
+      </section>
     </>
   );
-}
+} 
