@@ -1,0 +1,28 @@
+:root {
+  --bg-main: #0a0e1a;
+  --bg-soft: #0f162d;
+  --card-bg: rgba(255,255,255,0.045);
+  --card-blur: blur(14px);
+  --border-soft: rgba(214,179,106,0.18);
+  --text-main: #f5f6f8;
+  --text-muted: #a3acc2;
+  --gold: #d6b36a;
+  --shadow-soft: 0 20px 40px rgba(0,0,0,0.35);
+  --shadow-ambient: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(1200px at 20% -10%, #1b244a, transparent 60%),
+    radial-gradient(1000px at 90% 10%, #121b3a, transparent 55%),
+    linear-gradient(#06080f, #06080f);
+  color: var(--text-main);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

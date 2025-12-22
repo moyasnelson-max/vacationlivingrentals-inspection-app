@@ -1,0 +1,93 @@
+/* ================================
+   VACATION LIVING — HARD RESET UI
+   Elite Hospitality Visual System
+   ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- RESET PREVIO ---------- */
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #f6f2ea !important;
+  color: #1b1b1b !important;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
+}
+
+/* ---------- HERO ---------- */
+h1 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(2.4rem, 5vw, 3.4rem) !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.03em !important;
+  margin-bottom: 1rem !important;
+}
+
+p {
+  color: #4a4a4a !important;
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+/* ---------- CARDS ---------- */
+.card,
+[class*="card"] {
+  background: rgba(255,255,255,0.88) !important;
+  border-radius: 22px !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.6) !important;
+  backdrop-filter: blur(14px) !important;
+  transition: all 0.35s ease !important;
+}
+
+.card:hover,
+[class*="card"]:hover {
+  transform: translateY(-8px) !important;
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.14) !important;
+}
+
+/* ---------- LINKS / ACCENTS ---------- */
+a,
+button {
+  color: #c6a35c !important;
+  font-weight: 500 !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* ---------- GUEST ISSUE CARD ---------- */
+.guest,
+[class*="guest"] {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f3efe6 100%
+  ) !important;
+}
+
+/* ---------- MOBILE FIRST ---------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem !important;
+  }
+
+  .card,
+  [class*="card"] {
+    margin-bottom: 1.2rem !important;
+  }
+}

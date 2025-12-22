@@ -1,0 +1,273 @@
+:root {
+  --bg-main: #0a0e1a;
+  --bg-soft: #0f162d;
+  --card-bg: rgba(255,255,255,0.045);
+  --card-blur: blur(14px);
+  --border-soft: rgba(214,179,106,0.18);
+  --text-main: #f5f6f8;
+  --text-muted: #a3acc2;
+  --gold: #d6b36a;
+  --shadow-soft: 0 20px 40px rgba(0,0,0,0.35);
+  --shadow-ambient: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(1200px at 20% -10%, #1b244a, transparent 60%),
+    radial-gradient(1000px at 90% 10%, #121b3a, transparent 55%),
+    linear-gradient(#06080f, #06080f);
+  color: var(--text-main);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ────────────────────────────────────────────
+   ELITE LUXURY CARD SYSTEM
+   ──────────────────────────────────────────── */
+
+.card, .panel, .tile {
+  background: linear-gradient(180deg, #232019, #1c1a16);
+  border-radius: 20px;
+  border: 1px solid rgba(214,180,106,0.22);
+  box-shadow:
+    0 22px 50px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+@media (hover: hover) {
+  .card:hover, .panel:hover, .tile:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 34px 80px rgba(0,0,0,0.65),
+      inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+}
+
+
+header {
+  backdrop-filter: blur(14px);
+  background: linear-gradient(
+    180deg,
+    rgba(28,26,22,0.88),
+    rgba(28,26,22,0.68)
+  );
+  border-bottom: 1px solid rgba(214,180,106,0.18);
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.1rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .card, .panel, .tile {
+    padding: 22px;
+    margin-bottom: 18px;
+  }
+
+  button, .btn {
+    min-height: 50px;
+    width: 100%;
+  }
+}
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* ────────────────────────────────────────────
+   HERO · LUXURY DEPTH
+   ──────────────────────────────────────────── */
+
+.hero, main {
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(214,180,106,0.08), transparent 40%),
+    linear-gradient(180deg, #1c1a16 0%, #14120f 100%);
+}
+
+h1 {
+  letter-spacing: -0.025em;
+  text-shadow: 0 6px 40px rgba(0,0,0,0.55);
+}
+
+
+/* ────────────────────────────────────────────
+   CARD · EXECUTIVE LUXURY
+   ──────────────────────────────────────────── */
+
+.card, .panel, .tile {
+  position: relative;
+  isolation: isolate;
+}
+
+.card::before, .panel::before, .tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(214,180,106,0.18),
+    rgba(214,180,106,0.02) 60%
+  );
+  opacity: 0.0;
+  transition: opacity 0.35s ease;
+  z-index: -1;
+}
+
+@media (hover: hover) {
+  .card:hover::before,
+  .panel:hover::before,
+  .tile:hover::before {
+    opacity: 1;
+  }
+}
+
+
+/* ────────────────────────────────────────────
+   HEADER · SIGNATURE BAR
+   ──────────────────────────────────────────── */
+
+header {
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.03),
+    0 14px 40px rgba(0,0,0,0.55);
+}
+
+header span,
+header a {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+
+/* ────────────────────────────────────────────
+   MOBILE · EXECUTIVE PRIORITY
+   ──────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.95rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .card, .panel, .tile {
+    border-radius: 18px;
+    box-shadow:
+      0 18px 44px rgba(0,0,0,0.65);
+  }
+}
+
+
+/* GLOBAL POLISH */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ────────────────────────────────────────────
+   LUXURY COLOR OVERRIDES (BLUE → BEIGE)
+   ──────────────────────────────────────────── */
+
+:root {
+  --lux-bg-main: #181613;
+  --lux-bg-soft: #1f1c17;
+  --lux-beige: #cbb68a;
+  --lux-gold: #d6b46a;
+  --lux-text-main: #f5f3ee;
+  --lux-text-muted: #b8b3a6;
+}
+
+/* FORCE REMOVE BLUE TONES */
+*[style*="blue"],
+*[class*="blue"] {
+  color: var(--lux-beige) !important;
+}
+
+/* BACKGROUND REPLACEMENT */
+body,
+main {
+  background:
+    radial-gradient(900px 500px at 12% 8%, rgba(214,180,106,0.08), transparent 45%),
+    linear-gradient(180deg, var(--lux-bg-soft), var(--lux-bg-main)) !important;
+}
+
+/* HEADER SIGNATURE */
+header {
+  background: linear-gradient(
+    180deg,
+    rgba(24,22,19,0.85),
+    rgba(24,22,19,0.65)
+  ) !important;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(214,180,106,0.15);
+}
+
+/* TITLES */
+h1, h2, h3 {
+  color: var(--lux-text-main);
+  letter-spacing: -0.03em;
+}
+
+/* CARDS – ELEVATED LUXURY */
+.card,
+.panel,
+.tile {
+  background: linear-gradient(
+    180deg,
+    rgba(31,28,23,0.96),
+    rgba(24,22,19,0.96)
+  ) !important;
+  border: 1px solid rgba(214,180,106,0.22);
+  border-radius: 22px;
+  box-shadow:
+    0 28px 70px rgba(0,0,0,0.75),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* LINKS & CTA */
+a,
+button {
+  color: var(--lux-gold) !important;
+}
+
+a:hover,
+button:hover {
+  color: var(--lux-beige) !important;
+}
+
+/* MOBILE FIRST */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+
+  .card,
+  .panel,
+  .tile {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* FINAL POLISH */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
