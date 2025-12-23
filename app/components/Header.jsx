@@ -2,25 +2,26 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="vl-header">
-      <div className="vl-header-inner">
-        <div className="vl-brand">
+    <header className="site-header">
+      <div className="header-container">
+        <div className="brand">
           <Image
-            src="/brand/vl-logo.png"
+            src="/Public/brand/logo.png"
             alt="Vacation Living"
-            width={36}
-            height={36}
+            width={48}
+            height={48}
             priority
+            className="brand-logo"
           />
-          <div className="vl-brand-text">
-            <strong>Vacation Living</strong>
-            <span>Inspection & Operations Platform</span>
+          <div className="brand-text">
+            <strong className="brand-title">Vacation Living</strong>
+            <span className="brand-sub">Inspection & Operations Platform</span>
           </div>
         </div>
 
-        <div className="vl-header-actions">
-          <span className="vl-lang">EN / ES</span>
-          <a href="/login" className="vl-login">Secure Login</a>
+        <div className="header-actions">
+          <span className="langs">EN / ES</span>
+          <a href="/login" className="btn btn-outline login">Secure Login</a>
         </div>
       </div>
     </header>
