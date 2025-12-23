@@ -1,4 +1,4 @@
-export default function PrimaryButton({ children, variant = 'primary', role = 'button' }) {
+export default function PrimaryButton({ children, variant = 'primary', role = 'button', subtitle }) {
   const variantClasses = {
     primary: 'btn btn-primary',
     secondary: 'btn btn-secondary',
@@ -9,6 +9,11 @@ export default function PrimaryButton({ children, variant = 'primary', role = 'b
   const cls = variantClasses[variant] || variantClasses.primary
   
   return (
-    <button className={cls} type="button" role={role}>{children}</button>
+    <button className={cls} type="button" role={role}>
+      <span className="btn-content">
+        <span className="btn-main-text">{children}</span>
+        {subtitle && <span className="btn-subtitle">{subtitle}</span>}
+      </span>
+    </button>
   )
 }

@@ -8,11 +8,9 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-brand">
           <div className="footer-logo-section">
-            <Image
-              src="/Public/brand/logo.png"
+            <img
+              src="/brand/vacationliving/logo-optimized.svg"
               alt="Vacation Living"
-              width={40}
-              height={40}
               className="footer-logo"
             />
             <div className="footer-brand-text">
@@ -21,6 +19,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="footer-tagline">Excellence in property management</p>
+          <p className="footer-trust">Trusted by property owners since 2009. Operational excellence, delivered.</p>
         </div>
 
         <div className="footer-links">
@@ -49,6 +48,10 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="footer-version">
+          <span className="system-status">
+            <span className="status-indicator"></span>
+            <span className="status-text">System Operational</span>
+          </span>
           <span className="version-badge">v1.0.0</span>
           <span className="copyright">© {currentYear} Vacation Living Rentals. All rights reserved.</span>
         </div>
@@ -56,11 +59,9 @@ export default function Footer() {
         <div className="footer-partner">
           <span className="partner-label">Developed by</span>
           <div className="partner-logo-container">
-            <Image
-              src="/brand/digitalhive/logo.png"
+            <img
+              src="/brand/digitalhive/DigitalHive_Icon_optimized.svg"
               alt="Digital Hive"
-              width={24}
-              height={24}
               className="partner-logo"
             />
             <span className="partner-name">Digital Hive</span>
